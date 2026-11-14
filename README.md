@@ -18,8 +18,8 @@
 ## 跑起来
 
 ```bash
-git clone https://github.com/StarryKira/diy-ai-assistant.git
-cd diy-ai-assistant/ep01-first-agent
+git clone https://github.com/StarryKira/shoucuo-ai-assistant.git
+cd shoucuo-ai-assistant/ep01-first-agent
 cp .env.example .env      # Windows：copy .env.example .env
 # 打开 .env，填上你的 key
 uv run agent.py
@@ -42,3 +42,7 @@ uv lock --upgrade
 - key 只写在 `.env` 里，`.env` 已经写进 `.gitignore`，不会被提交。
 - 不要把 key 写进代码，也不要截图、录屏时露出来。
 - Claude 订阅（Pro / Max）登录只能自己用。不能把 Claude 账号登录做进给别人用的应用，也不能用订阅额度替别人跑请求，详见官方的[法律和合规](https://code.claude.com/docs/zh-CN/legal-and-compliance)页。
+
+## 许可证
+
+[MIT](LICENSE)：代码可以随便拿去用、改、商用，保留版权声明就行。
