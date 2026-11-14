@@ -18,8 +18,8 @@
 ## 跑起来
 
 ```bash
-git clone https://github.com/StarryKira/shoucuo-ai-assistant.git
-cd shoucuo-ai-assistant/ep01-first-agent
+git clone https://github.com/StarryKira/pocket-agent.git
+cd pocket-agent/ep01-first-agent
 cp .env.example .env      # Windows：copy .env.example .env
 # 打开 .env，填上你的 key
 uv run agent.py
