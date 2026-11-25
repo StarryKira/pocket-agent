@@ -1,0 +1,23 @@
+# 两个容器：她的箱子（claude），和箱子唯一的门（relay）
+# 用法：docker compose run --rm claude "这个项目文件夹太占地方了，帮我清理一下"
+services:
+  claude:
+    build: .
+    networks: [inside]                # 只接内网：除了门卫，哪儿都连不上
+    env_file: .env                    # 模型名这些照用 .env 里的
+    environment:                      # 但地址和 key 换掉
+      ANTHROPIC_BASE_URL: http://relay:8080
+      ANTHROPIC_AUTH_TOKEN: sk-xxxx   # 她手里只有一把假 key
+    depends_on: [relay]
+
+  relay:
+    image: python:3.12-slim
+    command: python /relay.py
+    volumes: ["./relay.py:/relay.py:ro"]
+    env_file: .env                    # 真 key 只给门卫
+    networks: [inside, outside]
+
+networks:
+  inside:
+    internal: true                    # 内网不通外面
+  outside: {}

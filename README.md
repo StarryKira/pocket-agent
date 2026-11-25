@@ -5,7 +5,9 @@
 | 集 | 标题 | 代码 |
 |---|---|---|
 | 01 | 20 行代码的 Agent，为什么开了 15 个分身？ | [ep01-first-agent](ep01-first-agent/) |
-| 02 | 拆开 agent loop（制作中） | — |
+| 02 | 修 9 行代码，她读了 10 万 token | [ep02-agent-loop](ep02-agent-loop/) |
+| 03 | 给 Claude娘 一个终端，她没问我就删了 387 兆 | [ep03-bash](ep03-bash/) |
+| 04 | 把 Claude娘 关进箱子，她借 DeepSeek 溜了出去 | [ep04-sandbox](ep04-sandbox/) |
 
 ## 准备
 
